@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_styling %}
+
+.pages {
+    color: #000 !important;
+}
+
+{% endblock extra_styling %}
+
+{% block content %}
+<div class="container my-3">
+    <ul class="list-group">
+        {% for page in template %}
+          
+        <li class="list-group-item"><a class="pages" href="{{ page }}"><u>{{ page }}</u></a></li>
+        {% endfor %}
+
+    </ul>
+</div>
+
+{% endblock content %}
