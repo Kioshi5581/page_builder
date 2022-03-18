@@ -7,14 +7,27 @@
     color: #000 !important;
 }
 
+.servers {
+    color: #000 !important;
+}
+
 {% endblock extra_styling %}
 
 {% block content %}
-<div class="container my-3">
-    <ul class="list-group">
+<div class="container my-3 py-3">
+    <h1>Templates</h1>
+    <ul class="list-group py-3">
         {% for page in template %}
-          
-        <li class="list-group-item"><a class="pages" href="{{ page }}"><u>{{ page }}</u></a></li>
+
+        <li class="list-group-item"><a class="pages" href="page/{{ page }}/"><u>{{ page }}</u></a></li>
+        {% endfor %}
+
+    </ul>
+    <h1>Hosting</h1>
+    <ul class="list-group py-3">
+        {% for server in Servers %}
+
+        <li class="list-group-item"><a class="servers" href="server/{{ server }}/"><u>{{ server }}</u></a></li>
         {% endfor %}
 
     </ul>

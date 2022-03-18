@@ -4,7 +4,7 @@
         <div id="carouselExampleControls" class="carousel slide pt-3" data-ride="carousel">
             <div class="carousel-inner">
                 
-                {% for review in reviews %}
+                {% for review in template.reviews_section_card.all %}
                 {% if forloop.first %}
                 <div class="carousel-item active">
     
